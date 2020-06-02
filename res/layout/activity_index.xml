@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/activity_head" />
+
+    <TextView
+        android:id="@+id/cityname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/include1"
+        android:text="城市"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/wendu"
+        android:layout_marginTop="16dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50px"
+            android:layout_height="50px" />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/wendu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="温度"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/tianqi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wendu"
+        android:layout_below="@+id/relativeLayout1"
+        android:text="天气" 
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/fengxiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tianqi"
+        android:layout_marginTop="41dp"
+        android:layout_toRightOf="@+id/wendu"
+        android:text="风向" />
+
+    <TextView
+        android:id="@+id/fengli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fengxiang"
+        android:layout_below="@+id/high"
+        android:text="风力" />
+
+    <TextView
+        android:id="@+id/high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fengxiang"
+        android:layout_alignBottom="@+id/fengxiang"
+        android:layout_alignParentLeft="true"
+        android:text="最高温度" />
+
+</RelativeLayout>
